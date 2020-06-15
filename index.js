@@ -17,42 +17,9 @@ currentResult = currentResult + (10 * 2) + 12 / 2;
 let currentDescription = '(10 * 2) + 12/2';
 outputResult(currentResult, currentDescription)
 
-
-// about functions
-function displayMessage(a, b) {
-  return a + b;
+//  functions without return statement
+function add(num1, num2) {
+  const result = num1 + num2;
+  alert("result is " + result);
 }
-displayMessage(10, 20);
-
-// function defined as expression and stored in a variable
-var x = function displayMessage(a, b) { return a + b };
-// variable used as function
-var y = x(4, 3);
-
-//  anonymus functions
-var x = function (a, b) { return a * b };
-var z = x(2, 3);   //invoking the anonymous function using variabble name
-
-
-//  self invoking anonymous functions
-(function () {
-  let a = 10, b = 10;
-  return a + b;
-})();
-
-
-//  self invoking anonymous functions
-(function myFunction() {
-  let a = 10, b = 10;
-  return a + b;
-})();
-
-// arrow functions
-// ES5 syntax
-var x = function (a, b) {
-  return a * b;
-}
-
-// ES6  syntax
-// using const here because function expression is always const,also omit function, return keyword, and curly braces there
-const x = (a, b) => a * b;
+add(2, 3);
